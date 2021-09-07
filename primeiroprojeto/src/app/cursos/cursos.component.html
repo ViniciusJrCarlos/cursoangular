@@ -1,1 +1,19 @@
-<p>cursos works!</p>
+<p>
+
+  Lista de  cursos do portal  {{nomePortal}}
+
+
+</p>
+
+
+<app-cursos-detalhe></app-cursos-detalhe>
+
+<ul>
+
+  <li *ngFor="let curso of cursos">
+
+    {{curso}}
+
+  </li>
+
+</ul>
