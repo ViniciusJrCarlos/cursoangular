@@ -18,11 +18,101 @@
     <img src="{{ urlimagem2 }}">
 
   </article>
+
   <br>
   <hr>
 
-</section>
+  <article>
+      <h3>property binding </h3>
+      <img [src]="urlimagem"> <br>
+      <img bind-src="urlimagem2">
+
+  </article>
+  <br>
+  <hr>
+
 
 <iframe width="100%" height="443" class="yvideo" id="pgHr6luyjjs" src="https://youtu.be/9qWsF-vepUY" frameborder="0" allowfullscreen>
 <p>Seu navegador não possui Suporte para este recurso...</p>
 </iframe>
+<br>
+<hr>
+<object width="425" height="350">
+<embed [src]="urlvideo" type="application/x-shockwave-flash" width="425" height="350" />
+<br>
+<hr>
+<param name="movie" value="urlvideo" />
+</object>
+<br>
+<hr>
+
+</section>
+
+<section>
+    <article>
+
+
+    <h3>Class e Style Binding com bootstrap</h3>
+        <div>
+          Selecione uma classse:
+
+          <select #classe (change)="0">
+              <option value="alert-success">Sucesso</option>
+              <option value="alert-info">Informação</option>
+              <option value="alert-warning">Alerta</option>
+              <option value="alert-danger">Erro</option>
+          </select>
+
+      </div>
+      <br><br>
+      <div class="alert" role="alert" [class.alert-success]="classe.value == 'alert-success'">
+        <a href="#" class="alert-link">sucesso</a>
+      </div>
+      <div class="alert" role="alert" [class.alert-info]="classe.value == 'alert-info'">
+        <a href="#" class="alert-link">informação</a>
+      </div>
+      <div class="alert" role="alert" [class.alert-warning]="classe.value == 'alert-warning'">
+        <a href="#" class="alert-link">alerta</a>
+      </div>
+      <div class="alert" role="alert" [class.alert-danger]="classe.value == 'alert-danger'">
+        <a href="#" class="alert-link">erro</a>
+      </div>
+      <br><br>
+      <hr>
+      <div class="alert {{ classe.value }} ">
+
+        texto colorido de acordo com combobox
+
+      </div>
+
+      <div class="alert" role="alert" [class.alert-success]="classe.value == 'alert-success'">
+      sucesso
+      </div>
+
+      <div class="alert" role="alert" [class.alert-success]="classe.value == 'alert-success'">
+        <a href="#" class="alert-link">sucesso</a>
+      </div>
+
+      <div class="alert" role="alert" [class.alert-info]="classe.value == 'alert-info'">
+        <a href="#" class="alert-link">informação</a>
+      </div>
+
+      <div class="alert" role="alert" [class.alert-warning]="classe.value == 'alert-warning'">
+        <a href="#" class="alert-link">alerta</a>
+      </div>
+
+      <div class="alert" role="alert" [class.alert-danger]="classe.value == 'alert-danger'">
+        <a href="#" class="alert-link">erro</a>
+      </div>
+
+      <br><br>
+      <hr>
+
+      <div class="alert alert-danger" role="alert" [style.display]="classe.value == 'alert-danger' ? 'block' : 'none'">
+        <a href="#" class="alert-link">erro</a>
+      </div>
+
+    </article>
+
+
+</section>

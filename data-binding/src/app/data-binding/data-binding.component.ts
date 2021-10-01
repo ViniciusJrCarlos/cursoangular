@@ -17,6 +17,9 @@ export class DataBindingComponent implements OnInit {
 
  urlvideo = 'https://www.youtube.com/watch?v=9qWsF-vepUY&ab_channel=RafaellaBallerini';
 
+ // aqui se trata de uma funcao
+ //function getValo()
+
  getValor(){
 
     return 1;
