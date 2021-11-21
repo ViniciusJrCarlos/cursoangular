@@ -116,3 +116,41 @@
 
 
 </section>
+<br><br>
+<hr>
+<section class="event-binding" >
+
+  <article >
+
+    <h3>Event binding</h3>
+    <div>
+
+      <button (click)="botaoClicado()" class="btn btn-primary">Clique Aqui</button>
+
+      <br><br>
+     <!-- <input type="text"
+
+      (keyup)="onKeyUp($event)"
+
+      (keyup.enter)="salvarValor(campoInput.value)"
+
+      (blur) = "salvarValor(campoInput.value)"
+
+      #campoInput
+
+
+      /> -->
+      <input type="text"
+
+      (keyup)="onKeyUp($event)"/>
+
+
+      <p>Valor Atual: {{ valorAtual }} </p>
+      <p>Valor Salvo: {{ valorSalvo }} </p>
+    </div>
+
+  </article>
+
+</section>
+<br><br>
+<hr>

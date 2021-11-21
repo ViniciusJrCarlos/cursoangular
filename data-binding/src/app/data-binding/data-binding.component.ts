@@ -20,6 +20,11 @@ export class DataBindingComponent implements OnInit {
  // aqui se trata de uma funcao
  //function getValo()
 
+ valorAtual: string = '';
+ valorSalvo: string = '';
+ //valor = '';
+ valor: string= 'kkkk';
+
  getValor(){
 
     return 1;
@@ -32,9 +37,26 @@ export class DataBindingComponent implements OnInit {
 
   }
 
+  botaoClicado(){
+
+    alert('FELIZ DIA DAS CRIANÇAS!');
+
+  }
+
+  onKeyUp(evento: KeyboardEvent){
+
+    this.valorAtual = ((<HTMLInputElement>evento.target).value);
+    //console.log((<HTMLInputElement>evento.target).value);
+  }
+ // salvarValor(){
+
+   // this.valorSalvo = valor;
+
+  //}
+
   constructor() { }
 
-  ngOnInit(): void {
+  ngOnInit() {
   }
 
 }
