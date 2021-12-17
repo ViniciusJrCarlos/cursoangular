@@ -6,6 +6,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./data-binding.component.css']
 })
 export class DataBindingComponent implements OnInit {
+
+
+  constructor() { }
+
+  ngOnInit() {
+  }
+
+
  //poderá tipar a variavel url: string "http://loiane.com"
   url = "http://loiane.com";
 
@@ -15,15 +23,20 @@ export class DataBindingComponent implements OnInit {
   // abaixo poderia definir uma funcao getValor () ou somente getValor
  urlimagem2 = 'https://image.freepik.com/fotos-gratis/fundo-azul-de-tecnologia-de-dados-com-midia-remixada-por-hacker_53876-108534.jpg';
 
- urlvideo = 'https://www.youtube.com/watch?v=9qWsF-vepUY&ab_channel=RafaellaBallerini';
+ urlvideo = 'https://www.youtube.com/watch?v=9qWsF-vepUY';
 
  // aqui se trata de uma funcao
  //function getValo()
 
  valorAtual: string = '';
  valorSalvo: string = '';
+ valorAtual2: string = '';
+
  //valor = '';
+ isMouseOver: boolean = false;
  valor: string= 'kkkk';
+ nome: string = 'abc';
+
 
  getValor(){
 
@@ -48,15 +61,23 @@ export class DataBindingComponent implements OnInit {
     this.valorAtual = ((<HTMLInputElement>evento.target).value);
     //console.log((<HTMLInputElement>evento.target).value);
   }
+  salvarValor(){
+
+    this.valorSalvo = this.valor;
+
+  }
+
+  OnKeyUp(evento2: KeyboardEvent){
+
+    this.valorAtual2 = (<HTMLInputElement>evento2.target).value;
+
+
+  }
+
  // salvarValor(){
 
    // this.valorSalvo = valor;
 
   //}
-
-  constructor() { }
-
-  ngOnInit() {
-  }
 
 }

@@ -154,3 +154,26 @@
 </section>
 <br><br>
 <hr>
+<section class="two-way-binding" >
+
+  <article >
+
+    <h3>two-way data binding</h3>
+
+    <div>
+
+
+     <!-- <input type="text" bindon-ngModel="nome"> -->
+      <!--<input type="text" [value]="nome" (input)="nome = $event.target.value" /> -->
+      <p>Voce digitou primeiro: <input type="text" [value]="nome" /> </p><br>
+
+      <p>Você digitou segundo: {{ nome }} </p> <br>
+
+    <!--<p>Você digitou terceiro: <input type="text" [ngModel]="valorAtual2" (ngModelChange)="valorAtual2 = $event"> </p> -->
+
+
+    </div>
+  </article>
+</section>
+<br><br>
+<hr>
