@@ -36,7 +36,12 @@ export class DataBindingComponent implements OnInit {
  isMouseOver: boolean = false;
  valor: string= 'kkkk';
  nome: string = 'abc';
+pessoa: any = {
 
+  nome: 'def',
+  idade: 20
+
+}
 
  getValor(){
 
@@ -67,12 +72,14 @@ export class DataBindingComponent implements OnInit {
 
   }
 
-  OnKeyUp(evento2: KeyboardEvent){
+  OnKeyUp2(evento2: KeyboardEvent){
 
     this.valorAtual2 = (<HTMLInputElement>evento2.target).value;
 
 
   }
+
+
 
  // salvarValor(){
 

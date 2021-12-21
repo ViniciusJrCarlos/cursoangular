@@ -163,15 +163,26 @@
     <div>
 
 
-     <!-- <input type="text" bindon-ngModel="nome"> -->
+     <!-- <input type="text" bindon-ngModel="nome"> (keyup)="onKeyUp($event)"-->
       <!--<input type="text" [value]="nome" (input)="nome = $event.target.value" /> -->
-      <p>Voce digitou primeiro: <input type="text" [value]="nome" /> </p><br>
+      <p>Voce digitou primeiro: <input type="text" [value]="nome"  /> </p><br>
 
       <p>Você digitou segundo: {{ nome }} </p> <br>
 
     <!--<p>Você digitou terceiro: <input type="text" [ngModel]="valorAtual2" (ngModelChange)="valorAtual2 = $event"> </p> -->
+       <!--<p> Você digitou terceiro:
+        <input type="text"
+        ([ngModel])="nome" ([ngModelChange ="nome = $event"]) /> </p> -->
+        <p> Você digitou terceiro: <input type="text" ngModel="nome" />
+          <p>Você digitou quarto: {{ nome }} </p> <br>
+    </div>
 
+    <h3>Usando Classes com two way databiding</h3>
+    <div>
 
+     nome: <input type="text" (ngmodel)="pessoa.nome" /><br><br>
+     idade: <input type="text" (ngmodel)="pessoa.idade" /><br><br>
+      <p> Meu Nome é {{ pessoa.nome }} e tenho {{ pessoa.idade }} anos</p>
     </div>
   </article>
 </section>
