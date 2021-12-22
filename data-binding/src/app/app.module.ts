@@ -1,5 +1,9 @@
+import { MeuFormModule } from './meu-form/meu-form.module';
+//import { MeuFormComponent } from './meu-form/meu-form.component';
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
+//import { HttpModule } from '@angular/http';
+//import { Bui } from '@angular-devkit/build-angular';
 // alterado abaixo conforme erro Can’t bind to ‘ngModel’ since it isn’t a known property of ‘input’.
 // importado os modulos conforme site https://www.angularjswiki.com/angular/
 import { FormsModule } from '@angular/forms';
@@ -23,7 +27,8 @@ import { DataBindingComponent } from './data-binding/data-binding.component';
      // importado os modulos conforme site https://www.angularjswiki.com/angular/
     FormsModule,
     CommonModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MeuFormModule
   ],
   providers: [],
   bootstrap: [AppComponent]
